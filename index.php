@@ -10,7 +10,7 @@
 <body>
 <main>    
  <div class="facebook-logo">
-  <img src="img/facebook-logo.svg">
+  <img src="facebook-logo.svg">
  </div>
  <div class="form">
    <form>

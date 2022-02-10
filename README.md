@@ -1,2 +1,2 @@
 Página de cadastro do facebook.
-Não está responsivo
+Não esta responsivo

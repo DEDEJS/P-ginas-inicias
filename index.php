@@ -6,25 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css">
 
- </head>
-<body>
+</head>
+<body >
 <main>    
  <div class="facebook-logo">
   <img src="facebook-logo.svg">
  </div>
  <div class="form">
-   <form>
+   <form >
+     
      <h1>Criar uma nova conta</h1>
      <p>É rápido e fácil.</p>
-     <!-- barra --> 
+     <!-- barra  --> 
+     
+     <div class="barra"></div>
      <div class="inputs">
-       <div> <input type="text" placeholder="Nome" class="nome">
-        <input type="text" placeholder="Sobrenome" class="sobrenome"></div>
-        <input type="text" placeholder="Celular ou email" class="email">
-        <input type="password" placeholder="Nova senha" class="senha">
-        <p>Data de nascimento</p>
+       <div >
+        <input type="text" placeholder="Nome" class="nome"  id="nome">
+        <input type="text" placeholder="Sobrenome" class="sobrenome" id="sobrenome">
+       </div>
+        <input type="text" placeholder="Celular ou email" class="email" id="email">
+        <input type="password" placeholder="Nova senha" class="senha" id="senha">
+        <p>Data de nascimento <span class="span">?</span></p>
         <div class="nascimento">
-        <select class="dia-select">
+        <select class="dia-select" id="dia-nascimento">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -57,7 +62,7 @@
         <option value="30">30</option>
         <option value="31">31</option>
         </select>
-        <select class="mes-select">
+        <select class="mes-select" id="mes-nascimento">
         <value="1">Jan</option>
         <option value="2" selected="1">Fev</option>
         <option value="3">Mar</option>
@@ -71,7 +76,7 @@
         <option value="11">Nov</option>
         <option value="12">Dez</option>
         </select>
-        <select class="ano-select">
+        <select class="ano-select" id="ano-nascimento">
           <option value="2022" selected="1">2022</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>
@@ -141,18 +146,28 @@
         </select>
        </div>
        <p>Gênero</p>
-     <div class="genero">  
+     <div class="genero" >  
        <label for="feminino">Feminino</label>
-       <input type="radio" class="feminino"> 
+       <input type="radio" name="genero" class="feminino" id="feminino" value="feminino" onclick="return HidePronome();"> 
        
      </div>
-     <div class="genero-2">
+     <div class="genero-2" >
       <label for="masculino">Masculino</label>
-       <input type="radio" name="masculino">
+       <input type="radio" name="genero" id="masculino" value="masculino" onclick="return HidePronome();">
      </div>
-     <div class="genero-3">
+     <div class="genero-3" >
       <label for="personalizado">Personalizado</label>
-       <input type="radio" name="personalizado">
+       <input type="radio" name="genero" id="personalizado" value="personalizado" onclick="return ShowPronome();">
+     </div>
+     <div class="pronome" id="pronome">
+       <select id="GeneroPronome" class="GeneroPronome">
+       <option selected="1" value="0" disabled="1">Selecione seu pronome</option>
+       <option value="1">Feminino: "Deseje a ela um feliz aniversário!"</option>
+       <option value="2">Masculino: "Deseje a ele um feliz aniversário!"</option>
+       <option value="6">Neutro: "Deseje a ele(a) um feliz aniversário!"</option>
+       </select>
+       <p>Seu pronome fica visível para todos.</p>
+       <input type="text" placeholder="Gênero (opcional)">
      </div>
      <div class="termos">
       <p>Ao clicar em Cadastre-se, você concorda com nossos Termos, 
@@ -185,5 +200,7 @@
 
 </div>
 </footer>
+<script type="text/javascript" src="javascript/validacao.js" ></script>
+
 </body>
 </html>
